@@ -18,7 +18,7 @@ jobs:
           cache: true
       - name: Create Android project files
         run: flutter create --platforms=android --org com.soulbeads --project-name soulbeads .
-      - run: flutter pub get
+      - run: flutter pub add shared_preferences
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:
